@@ -20,7 +20,7 @@
   <parent>
     <groupId>org.apache</groupId>
     <artifactId>apache</artifactId>
-    <version>30</version>
+    <version>31</version>
   </parent>
   <groupId>org.apache.accumulo</groupId>
   <artifactId>accumulo-examples</artifactId>
@@ -35,7 +35,6 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <minimalJavaBuildVersion>11</minimalJavaBuildVersion>
-    <minimalMavenBuildVersion>3.5.0</minimalMavenBuildVersion>
     <!-- timestamp for reproducible outputs, updated on release by the release plugin -->
     <project.build.outputTimestamp>2020-12-17T22:06:50Z</project.build.outputTimestamp>
     <zookeeper.version>3.8.3</zookeeper.version>
@@ -120,13 +119,6 @@
     <pluginManagement>
       <plugins>
         <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <configuration>
-            <optimize>true</optimize>
-          </configuration>
-        </plugin>
-        <plugin>
           <groupId>com.github.ekryd.sortpom</groupId>
           <artifactId>sortpom-maven-plugin</artifactId>
           <version>3.2.0</version>
@@ -186,7 +178,6 @@
         <!-- This was added to ensure project only uses public API -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.2.0</version>
         <configuration>
           <configLocation>contrib/checkstyle.xml</configLocation>
         </configuration>
@@ -251,7 +242,6 @@
         <configuration>
           <configFile>${eclipseFormatterStyle}</configFile>
           <lineEnding>LF</lineEnding>
-          <overrideConfigCompilerVersion>true</overrideConfigCompilerVersion>
           <skipCssFormatting>true</skipCssFormatting>
           <skipHtmlFormatting>true</skipHtmlFormatting>
           <skipJsFormatting>true</skipJsFormatting>
